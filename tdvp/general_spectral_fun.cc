@@ -9,7 +9,7 @@ int main()
     double Jz = 1.0;
     double D = 1.0;
 
-    std::string fname = "Axt_SzSz_N="+std::to_string(N)+"_Jz="+std::to_string(Jz)+"_D="+std::to_string(D)+".csv";
+    std::string fname = "Axt_SmSp_N="+std::to_string(N)+"_Jz="+std::to_string(Jz)+"_D="+std::to_string(D)+".csv";
 
     // Make N spin 1 sites
     auto sites = SpinOne(N,{"ConserveQNs=",true});
@@ -58,7 +58,7 @@ int main()
     para.add("ttotal", tend);
     para.add("file_name",fname);
 
-    spectralFunction(psi, H, energy, sites, "Sz","Sz", para);
+    spectralFunction(psi, H, energy, sites, "S-","S+", para);
 
     return 0;
     }
